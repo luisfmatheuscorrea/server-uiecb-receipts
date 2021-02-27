@@ -3,7 +3,7 @@ exports.up = function(knex) {
   return knex.schema.createTable('receipts', function (table) {
     table.increments('numeration').primary();
     table.string('sender').notNullable();
-    table.string('departments').array();
+    table.string('departments').notNullable();
     table.string('receivement').nullable();
     table.decimal('value').notNullable();
     table.decimal('debit').nullable();
